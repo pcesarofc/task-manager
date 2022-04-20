@@ -15,7 +15,7 @@ const InsertTask = () => {
         newTasks = [...task, {
             title: document.getElementById('task-title').value,
             description: document.getElementById('task-description').value,
-            status: 0
+            status: false,
         }]
 
         setTask(newTasks);
@@ -24,7 +24,7 @@ const InsertTask = () => {
 
     return <>
         <Button variant="primary" onClick={handleShow}>
-            Adicionar tarefa
+            +
         </Button>
 
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
@@ -33,7 +33,7 @@ const InsertTask = () => {
             </Modal.Header>
             <Modal.Body>
                 <input type="text" id="task-title" placeholder="Tarefa" autoComplete="off" />
-                <input type="text" id="task-description" placeholder="Detalhes" autoComplete="off" />
+                <textarea type="text" id="task-description" placeholder="Detalhes" autoComplete="off" />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}> Fechar </Button>

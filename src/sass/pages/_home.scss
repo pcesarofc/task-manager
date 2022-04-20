@@ -1,0 +1,64 @@
+.home-page{
+    @include display(flex, column, start, center);
+
+    h1{
+        @include margin(20px, 0, 0, 0);
+    }
+
+    .btn-primary{
+        @include margin(20px, 20px, 0, 0);
+        @include border(0px, none, transparent);
+    }
+
+    article{
+        .tasks-container{
+            .tasks{
+                @include dimension(60vw, auto);
+
+                .accordion{
+                    @include margin(20px, 20px, 0, 0);
+                    
+                    .accordion-item{
+                        @include margin(0, 0, 0, 0);
+                        
+                        .accordion-header{
+                            .accordion-button{
+                                @include display(flex, row, center, center);
+                                @include padding(0, 0, 0, 20px);
+                                cursor: default;
+                                
+                                .task-status{
+                                    @include dimension(5px, 50px);
+                                    @include color($status-processing, $black-color);
+                                }
+                                
+                                p{
+                                    @include margin(0, 0, 10px, 0);
+                                    @include font(16px, 700);
+                                }
+                                
+                                .button-delete{
+                                    @include margin(0, 0, auto, 0);
+                                    @include color(transparent, $error-color);
+                                    cursor: pointer;
+
+                                    &:hover{
+                                        @include color(transparent, $status-processing)
+                                    }
+                                }
+
+                                &::after{
+                                    content: none;
+                                }
+                            }
+                        }
+
+                        .accordion-body{
+                            @include color($task-color, black)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

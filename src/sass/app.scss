@@ -2,7 +2,6 @@
 @import './abstract/mixins';
 @import './abstract/variables';
 
-
 //components
 @import './components/insertTask';
 
@@ -16,4 +15,12 @@
 
 body{
     margin: 0;
+}
+
+.App{
+    @include dimension(auto, 100vh);
+    @include color($background-color, $task-color);
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr;
 }

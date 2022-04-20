@@ -13,12 +13,13 @@ const Home = () => {
     }, [])
 
     return <main className="home-page">
-        <InsertTask />
+        <h1 className="title-page">Tarefas</h1>
         <article className="home-container">
             <section className="tasks-container">
                 <Tasks taskmap={taskmap} />
             </section>
         </article>
+        <InsertTask />
     </main>
 }
 

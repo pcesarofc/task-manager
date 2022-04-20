@@ -1,9 +1,10 @@
 .header-page{
-    @include dimension(100vw, 80px);
-    @include display(flex, row, center, center);
-    @include color(red, white);
+    @include dimension(100vw, auto);
+    @include display(flex, row, start, center);
+    @include color($background-color, $task-color);
+    border-bottom: 1px solid gray;
 
     img{
-        @include dimension(auto, 80px);
+        @include dimension(auto, 100px);
     }
 }

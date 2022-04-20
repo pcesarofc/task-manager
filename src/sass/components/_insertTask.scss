@@ -1,9 +1,53 @@
-#task-title{
-    @include dimension(80%, 40px);
-    @include margin(0, 5px, 0, 0);
-}
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-body{
+                @include display(flex, column, center, center);
 
-#task-description{
-    @include dimension(80%, 200px);
-    @include margin(0, 5px, 0, 0);
+                #task-title{
+                    @include dimension(80%, 30px);
+                    @include margin(0, 10px, 0, 0);
+                    @include border(0px, solid, $black-color);
+                    border-bottom: 1px solid $black-color;
+                    
+                    &:focus {
+                        box-shadow: 0 0 0 0;
+                        outline: 0;
+                    }
+                }
+                
+                #task-description{
+                    @include dimension(80%, 100px);
+                    @include border(0px, solid, transparent);
+                    @include border(0px, solid, $black-color);
+                    border-bottom: 1px solid $black-color;
+                    
+                    &:focus {
+                        box-shadow: 0 0 0 0;
+                        outline: 0;
+                    }
+                }
+            }
+
+            .modal-footer{
+                .btn-secondary{
+                    @include color($error-color, $task-color);
+                    @include border(0px, solid, transparent);
+                    
+                    &:hover{
+                        @include color($status-processing, $task-color);
+                    }
+                }
+                
+                .btn-primary{
+                    @include color($background-color, $task-color);
+                    @include border(0px, solid, transparent);
+
+                    &:hover{
+                        @include color($header-color, $task-color);
+                    }
+                }
+            }
+        }
+    }
 }
