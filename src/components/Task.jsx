@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Accordion } from "react-bootstrap";
+import { TaskContext } from '../contexts/TaskContext';
 
-const Task = () => {
-    return <Accordion defaultActiveKey="0">
+const Task = ({ taskmap }) => {
+
+    const { task, setTask } = useContext(TaskContext);
+
+    function deleteTask() {
+        var newTask = task.filter((task) => task.title !== taskmap.title);
+        setTask(newTask)
+    }
+
+    return <Accordion defaultActiveKey="0" id={taskmap.status}>
         <Accordion.Item eventKey="1">
-            <Accordion.Header>TAREFA</Accordion.Header>
+            <Accordion.Header>
+                <p>{taskmap.title}</p>
+                <input type="button" value="Deletar" onClick={deleteTask} />
+            </Accordion.Header>
             <Accordion.Body>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                est laborum.
+                {taskmap.description}
             </Accordion.Body>
         </Accordion.Item>
     </Accordion>
