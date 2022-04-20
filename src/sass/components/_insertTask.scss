@@ -1,0 +1,9 @@
+#task-title{
+    @include dimension(80%, 40px);
+    @include margin(0, 5px, 0, 0);
+}
+
+#task-description{
+    @include dimension(80%, 200px);
+    @include margin(0, 5px, 0, 0);
+}

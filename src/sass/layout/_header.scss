@@ -1,0 +1,9 @@
+.header-page{
+    @include dimension(100vw, 80px);
+    @include display(flex, row, center, center);
+    @include color(red, white);
+
+    img{
+        @include dimension(auto, 80px);
+    }
+}
