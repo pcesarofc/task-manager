@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import InsertTask from "../components/InsertTask";
-import Task from "../components/Task";
 import { TaskContext } from "../contexts/TaskContext";
+import Tasks from "../components/Tasks";
+
 
 const Home = () => {
     const { task } = useContext(TaskContext);
@@ -15,7 +16,7 @@ const Home = () => {
         <InsertTask />
         <article className="home-container">
             <section className="tasks-container">
-                {task.map((taskmap) => (<Task taskmap={taskmap} />))}
+                <Tasks taskmap={taskmap} />
             </section>
         </article>
     </main>

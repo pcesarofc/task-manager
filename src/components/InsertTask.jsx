@@ -15,7 +15,7 @@ const InsertTask = () => {
         newTasks = [...task, {
             title: document.getElementById('task-title').value,
             description: document.getElementById('task-description').value,
-            status: '0'
+            status: 0
         }]
 
         setTask(newTasks);

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { TaskContext } from '../contexts/TaskContext';
 
@@ -11,9 +11,10 @@ const Task = ({ taskmap }) => {
         setTask(newTask)
     }
 
-    return <Accordion defaultActiveKey="0" id={taskmap.status}>
-        <Accordion.Item eventKey="1">
-            <Accordion.Header>
+    return <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="1" >
+            <Accordion.Header >
+                <div id={taskmap.status} />
                 <p>{taskmap.title}</p>
                 <input type="button" value="Deletar" onClick={deleteTask} />
             </Accordion.Header>
