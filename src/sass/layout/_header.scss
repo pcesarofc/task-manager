@@ -2,9 +2,10 @@
     @include dimension(100vw, auto);
     @include display(flex, row, start, center);
     @include color($background-color, $task-color);
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $header-color;
 
     img{
         @include dimension(auto, 100px);
+        @include margin(0, 0, 40px, 0);
     }
 }

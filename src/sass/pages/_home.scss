@@ -8,6 +8,9 @@
     .btn-primary{
         @include margin(20px, 20px, 0, 0);
         @include border(0px, none, transparent);
+        @include color($task-color, $gray-color);
+        @include font(16px, 800);
+        @include border-radius(100px, 100px, 100px, 100px);
     }
 
     article{
@@ -54,7 +57,16 @@
                         }
 
                         .accordion-body{
-                            @include color($task-color, black)
+                            @include color($task-color, black);
+
+                            .status{
+                                @include display(flex, row, start, center);
+
+                                p{
+                                    @include margin(0, 0, 0, 5px);
+                                    @include font(16px, 700);
+                                }
+                            }
                         }
                     }
                 }

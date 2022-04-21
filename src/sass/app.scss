@@ -12,15 +12,24 @@
 //pages
 @import './pages/home';
 
+html, #root{
+    @include dimension(100%, 100%);
+    @include color($background-color, $task-color);
+    overflow-x: hidden;
+}
 
 body{
     margin: 0;
+    @include color($background-color, $task-color);
+    @include dimension(100%, 100%);
 }
 
 .App{
-    @include dimension(auto, 100vh);
     @include color($background-color, $task-color);
+    @include dimension(100%, 100%);
     display: grid;
-    grid-template-rows: 100px 1fr;
     grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }

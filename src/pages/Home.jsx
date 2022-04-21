@@ -13,7 +13,7 @@ const Home = () => {
     }, [])
 
     return <main className="home-page">
-        <h1 className="title-page">Tarefas</h1>
+        <h1 className="title-page">LISTA DE TAREFAS</h1>
         <article className="home-container">
             <section className="tasks-container">
                 <Tasks taskmap={taskmap} />
