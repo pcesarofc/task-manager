@@ -5,11 +5,16 @@ import Tasks from "../components/Tasks";
 
 
 const Home = () => {
-    const { task } = useContext(TaskContext);
+    const { task, setTask } = useContext(TaskContext);
     const [taskmap, setTaskMap] = useState([]);
 
     useEffect(() => {
-        setTaskMap(task);
+        if (localStorage.getItem('tasks')) {
+            var newTask = []
+            newTask = JSON.parse(localStorage.getItem('tasks'))
+            setTask(newTask)
+            setTaskMap(task);
+        }
     }, [])
 
     return <main className="home-page">

@@ -17,7 +17,7 @@ const InsertTask = () => {
             description: document.getElementById('task-description').value,
             status: false
         }]
-
+        localStorage.setItem('tasks', JSON.stringify(newTasks))
         setTask(newTasks);
         setShow(false);
     }
