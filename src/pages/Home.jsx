@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import InsertTask from "../components/InsertTask";
 import { TaskContext } from "../contexts/TaskContext";
 import Tasks from "../components/Tasks";
+import Legend from "../components/Legend";
 
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
             </section>
         </article>
         <InsertTask />
+        <Legend />
     </main>
 }
 

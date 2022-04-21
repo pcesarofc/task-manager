@@ -10,6 +10,7 @@ const Task = ({ taskmap }) => {
     function deleteTask() {
         var newTask = task.filter((task) => task.title !== taskmap.title);
         var confirmDelete = window.confirm("Você tem certeza?");
+
         if (confirmDelete == true) {
             setTask(newTask)
             localStorage.setItem('tasks', JSON.stringify(newTask))

@@ -1,22 +1,23 @@
 import React, { useContext, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-import { TaskContext } from '../contexts/TaskContext'
+import { TaskContext } from '../contexts/TaskContext';
 
 const InsertTask = () => {
 
     const { task, setTask } = useContext(TaskContext);
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     function addTask() {
         var newTasks = []
+
         newTasks = [...task, {
             title: document.getElementById('task-title').value,
             description: document.getElementById('task-description').value,
             status: false
         }]
+
         localStorage.setItem('tasks', JSON.stringify(newTasks))
         setTask(newTasks);
         setShow(false);

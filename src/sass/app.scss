@@ -4,6 +4,7 @@
 
 //components
 @import './components/insertTask';
+@import './components/legend';
 
 //layout
 @import './layout/header';
@@ -27,6 +28,7 @@ body{
 .App{
     @include color($background-color, $task-color);
     @include dimension(100%, 100%);
+    font-family: "Open sans";
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr;

@@ -2,7 +2,8 @@
     @include display(flex, column, start, center);
 
     h1{
-        @include margin(20px, 0, 0, 0);
+        @include margin(20px, 20px, 0, 0);
+        @include font(auto, 800)
     }
 
     .btn-primary{

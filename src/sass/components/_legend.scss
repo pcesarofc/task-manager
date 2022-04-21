@@ -1,0 +1,32 @@
+.legends{
+    @include display(flex, column, center, center);
+    
+    .not-completed{
+        @include display(flex, row, center, center);
+        @include margin(0, 10px, 0, 0);
+        
+        div{
+            @include dimension(50px, 30px);
+            @include color($status-processing, transparent);
+            @include margin(0, 0, 0, 5px);
+        }
+
+        p{
+            @include margin(0, 0, 0, 5px);
+        }
+    }
+
+    .completed{
+        @include display(flex, row, center, center);
+        
+        div{
+            @include dimension(50px, 30px);
+            @include color($status-check, transparent);
+            @include margin(0, 0, 0, 5px);
+        }
+
+        p{
+            @include margin(0, 0, 0, 5px);
+        }
+    }
+}
