@@ -9,7 +9,7 @@ const Task = ({ taskmap }) => {
 
     function deleteTask() {
         var newTask = task.filter((task) => task.title !== taskmap.title);
-        var confirmDelete = window.confirm("Você tem certeza?");
+        var confirmDelete = window.confirm("Você deseja excluir essa tarefa?");
 
         if (confirmDelete == true) {
             setTask(newTask)

@@ -1,5 +1,5 @@
 .legends{
-    @include display(flex, column, center, center);
+    @include display(flex, column, center, start);
     
     .not-completed{
         @include display(flex, row, center, center);
@@ -13,6 +13,7 @@
 
         p{
             @include margin(0, 0, 0, 5px);
+            @include font(16px, 700)
         }
     }
 
@@ -27,6 +28,7 @@
 
         p{
             @include margin(0, 0, 0, 5px);
+            @include font(16px, 700)
         }
     }
 }
